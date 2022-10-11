@@ -70,7 +70,7 @@ public static int countNotes(int[] arrDenominations, int[] counter, int low, int
 		return countNotes(arrDenominations, counter, 0, high - 1, amountToPay);
 	}
 	int mid = (low+high)/2;
-	if(amountToPay <= arrDenominations[mid])
+	if(amountToPay < arrDenominations[mid])
 	{
 		return countNotes(arrDenominations, counter, 0, mid - 1, amountToPay);
 	}
